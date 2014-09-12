@@ -1,7 +1,7 @@
 <?php
 //if(!defined('IN_TRACKER'))
 //    die('Hacking attempt!');
-include_once("globalfunction.php");
+require_once("globalfunction.php");
 
 function dbconnect(){
     $db = array(
