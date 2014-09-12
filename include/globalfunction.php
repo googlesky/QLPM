@@ -2,6 +2,11 @@
 //if(!defined('IN_TRACKER'))
 //    die('Hacking attempt!');
 
+require_once("cache/phpfastcache.php");
+phpFastCache::setup("bonho","auto");
+
+$Cache = phpFastCache();
+
 function get_global_sp_state()
 {
     global $Cache;
