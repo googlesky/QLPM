@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Administrator</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/admin.css">
+    <link rel="stylesheet" href="css/morris-0.4.3.min.css">
+    <link rel="stylesheet" href="css/timeline/timeline.css">
+    <!-- Custom styles for this template -->
+    <!-- <link href="style.css" rel="stylesheet"> -->
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]
+  </head> -->
+
+  <body>
+  
+  <!-- MENU HEADER ================================================================== -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">CTEC SYSTEM</a>
+      </div>
+    
+      <!-- Navigation top static -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+      
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">LINK</a></li>
+          <li><a href="#">LINK</a></li>
+          <li><a href="#">LINK</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right container-fluid">
+          <li>
+            <form class="navbar-form" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Tìm kiếm..." style="border-radius: 30px;">
+              </div>
+            </form>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="glyphicon glyphicon-bell"></span>
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="setting-mess.html">Zack Le&nbsp;&nbsp;&nbsp;<span class="badge pull-right">3</span></a></li>
+              <li><a href="setting-mess.html">ZuVN&nbsp;&nbsp;&nbsp;<span class="badge pull-right">1</span></a></li>
+              <li><a href="setting-mess.html">Nhanh&nbsp;&nbsp;&nbsp;<span class="badge pull-right">5</span></a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="glyphicon glyphicon-user"></span>
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="setting.html"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;Thông tin cá nhân</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-cog"></span>&nbsp;Tùy chọn</a></li>
+              <li class="divider"></li>
+              <li><a href="login.html"><span class="glyphicon glyphicon-off"></span>&nbsp;Đăng xuất</a></li>
+            </ul>
+          </li>
+        </ul>
+        
+      </div><!-- /.navbar-collapse -->
+    </div>
+    <!-- BODY ================================================================== -->
+    <div class="container-fluid" id="main_content">
+
+        <div class="row">
+          <!-- SIDEBAR ================================================================ -->
+          <div class="col-md-2 sidebar">
+          
+            <div class="row">
+              <div class="col-md-12">
+                <div class="img-circle" id="avatar">
+                <img alt="My Avatar" src="images/avatar.jpg" class="center-block img-circle img-responsive">
+                </div>
+                <p>
+                  <h1 class="text-center" style="color: #878787;">Zack Le</h1>
+                </p>
+              </div><!-- End .col-md-12 .avatar -->
+            </div>
+            <ul id="menu" class="nav nav-sidebar">
+              <li class="active">
+                <a href="#">Trang chủ</a>
+
+              </li>
+              <li>
+                <a href="#">Quản lý <span class="glyphicon glyphicon-plus pull-right"></span></a>
+                <ul class="list-unstyled nav">
+                  <li><a href="phong.html">Phòng</a></li>
+                  <li><a href="may.html">Máy tính</a></li>
+                </ul>
+              </li>
+              <li><a href="setting.html">Người dùng</a></li>
+            </ul>
+          </div><!-- End .col-md-2 .sidebar-->
+
+          <!-- RIGHT MAIN ============================================================ -->
+          
+          <div class="col-md-10 col-md-offset-2" id="main_primary">
+
+            <div class="row">
+
+              <div class="col-md-12">
+
+                <h1>Trang quản lý
+                  <small>Thống kê chi tiết</small>
+                </h1>
+                <div class="alert alert-info fade in">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                  <strong>Chào mừng </strong> bạn đã đến với trang quản lý phòng máy. Dưới đây là thống kê tổng quan toàn bộ thông tin của phòng máy hiện tại.
+                </div>
+
+              </div><!-- End .col-md-12 -->
+
+            </div><!-- End .row top-->
+
+            <div class="row">
+
+              <div class="col-md-3">
+                <div class="panel panel-primary">
+
+                  <div class="panel-heading">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <span class="glyphicon glyphicon-record"></span>
+                      </div>
+                      <div class="col-md-6 text-right">
+                        <h2>234</h2> 
+                        <p>máy trên <strong>4</strong> phòng</p>
+                      </div>
+                    </div>
+                  </div><!-- End .panel-heading -->
+
+                  <div class="panel-footer">
+                    <div class="row">
+                      <div class="col-md-6">
+                        Tổng số máy hiện tại
+                      </div>
+                      <div class="col-md-6 text-right">
+                        <a href="#">Xem chi tiết
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div><!-- End .panel-footer -->
+
+                </div><!-- End .panel panel-primary -->
+              </div><!-- End .col-md-3 -->
+
+              <div class="col-md-3">
+                <div class="panel panel-success">
+
+                  <div class="panel-heading">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <span class="glyphicon glyphicon-download-alt"></span>
+                      </div>
+                      <div class="col-md-6 text-right">
+                        <h2>26</h2> 
+                        <p><strong>phần mềm</strong> đã cài</p>
+                      </div>
+                    </div>
+                  </div><!-- End .panel-heading -->
+
+                  <div class="panel-footer">
+                    <div class="row">
+                      <div class="col-md-6">
+                        Tổng số phần mềm
+                      </div>
+                      <div class="col-md-6 text-right">
+                        <a href="#">Xem chi tiết
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div><!-- End .panel-footer -->
+
+                </div><!-- End .panel panel-success -->
+              </div><!-- End .col-md-3 -->
+
+              <div class="col-md-3">
+                <div class="panel panel-danger">
+
+                  <div class="panel-heading">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <span class="glyphicon glyphicon-remove-sign"></span>
+                      </div>
+                      <div class="col-md-6 text-right">
+                        <h2>27</h2> 
+                        <p>máy bị <strong>hỏng</strong></p>
+                      </div>
+                    </div>
+                  </div><!-- End .panel-heading -->
+
+                  <div class="panel-footer">
+                    <div class="row">
+                      <div class="col-md-6">
+                        Tổng số máy bị hỏng
+                      </div>
+                      <div class="col-md-6 text-right">
+                        <a href="#">Xem chi tiết
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div><!-- End .panel-footer -->
+
+                </div><!-- End .panel panel-danger -->
+              </div><!-- End .col-md-3 -->
+
+              <div class="col-md-3">
+                <div class="panel panel-warning">
+
+                  <div class="panel-heading">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <span class="glyphicon glyphicon-wrench"></span>
+                      </div>
+                      <div class="col-md-6 text-right">
+                        <h2>14</h2> 
+                        <p><strong>vật dụng</strong> có sẵn</p>
+                      </div>
+                    </div>
+                  </div><!-- End .panel-heading -->
+
+                  <div class="panel-footer">
+                    <div class="row">
+                      <div class="col-md-6">
+                        Tổng số vật dụng
+                      </div>
+                      <div class="col-md-6 text-right">
+                        <a href="#">Xem chi tiết
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div><!-- End .panel-footer -->
+
+                </div><!-- End .panel panel-warning -->
+              </div><!-- End .col-md-3 -->
+
+            </div><!-- End .row panel-->
+
+            <div class="row">
+
+              <div class="col-md-8">
+                
+                <div class="panel panel-primary" id="lichlamviec">
+                  <div class="panel-heading">
+                    <span class="glyphicon glyphicon-calendar"></span> Lịch làm việc
+                  </div>
+                  <div class="panel-body">
+                    <ul class="timeline">
+                      <li>
+                        <div class="timeline-badge danger"><span class="glyphicon glyphicon-info-sign"></span></div>
+                        <div class="timeline-panel">
+                          <div class="timeline-heading">
+                            <h3 class="timeline-title">Sửa máy ở phòng 3</h3>
+                            <p>
+                              <small class="text-muted"><i class="fa fa-time"></i> 7:00 AM 11/03/2014</small>
+                            </p>
+                          </div>
+                          <div class="timeline-body">
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, enim, dolorum nemo at sint provident totam asperiores eveniet animi maxime aliquam saepe voluptates esse quo cum sunt optio tenetur? Harum.
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="timeline-inverted">
+
+                        <div class="timeline-badge success"><span class="glyphicon glyphicon-ok"></span></div>
+                        <div class="timeline-panel">
+                          <div class="timeline-heading">
+                            <h3 class="timeline-title">Sửa máy ở phòng 3</h3>
+                            <p>
+                              <small class="text-muted"><i class="fa fa-time"></i> 7:00 AM 11/03/2014</small>
+                            </p>
+                          </div>
+                          <div class="timeline-body">
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, enim, dolorum nemo at sint provident totam asperiores eveniet animi maxime aliquam saepe voluptates esse quo cum sunt optio tenetur? Harum.
+                            </p>
+                          </div>
+                        </div>
+
+                      </li>
+                      <li>
+                        
+                        <div class="timeline-badge warning"><span class="glyphicon glyphicon-tags"></span></div>
+                        <div class="timeline-panel">
+                          <div class="timeline-heading">
+                            <h3 class="timeline-title">Sửa máy ở phòng 3</h3>
+                            <p>
+                              <small class="text-muted"><i class="fa fa-time"></i> 7:00 AM 11/03/2014</small>
+                            </p>
+                          </div>
+                          <div class="timeline-body">
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, enim, dolorum nemo at sint provident totam asperiores eveniet animi maxime aliquam saepe voluptates esse quo cum sunt optio tenetur? Harum.
+                            </p>
+                          </div>
+                        </div>
+
+                      </li>
+                      <li class="timeline-inverted">
+
+                        <div class="timeline-badge info"><span class="glyphicon glyphicon-bookmark"></span></div>
+                        <div class="timeline-panel">
+                          <div class="timeline-heading">
+                            <h3 class="timeline-title">Sửa máy ở phòng 3</h3>
+                            <p>
+                              <small class="text-muted"><i class="fa fa-time"></i> 7:00 AM 11/03/2014</small>
+                            </p>
+                          </div>
+                          <div class="timeline-body">
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, enim, dolorum nemo at sint provident totam asperiores eveniet animi maxime aliquam saepe voluptates esse quo cum sunt optio tenetur? Harum.
+                            </p>
+                          </div>
+                        </div>
+                        
+                      </li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-md-4">
+                
+                <div class="chat-panel panel panel-primary">
+                  <div class="panel-heading">
+                    <span class="glyphicon glyphicon-comment"></span>
+                    &nbsp;Chat
+                    <div class="btn-group pull-right">
+                      <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-cog"></span>
+                      </button>
+                      <ul class="dropdown-menu slidedown">
+                        <li><a href="#" style="color: black;"><span class="glyphicon glyphicon-refresh"></span> Làm tươi</a></li>
+                        <li><a href="#" style="color: black;"><span class="glyphicon glyphicon-ok-circle"></span> Online</a></li>
+                        <li><a href="#" style="color: black;"><span class="glyphicon glyphicon-ban-circle"></span> Đang bận</a></li>
+                        <li><a href="#" style="color: black;"><span class="glyphicon glyphicon-log-out"></span> Đăng xuất chat</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="panel-body">
+                    <ul class="chat">
+                      <li class="left clearfix">
+                        <span class="pull-left"><img src="images/a.gif" alt="Avatar" class="img-circle"></span>
+                        <div class="chat-body clearfix">
+                          <div class="header">
+                            <strong>Zu Vn</strong>
+                            <small class="pull-right text-muted">
+                              <span class="glyphicon glyphicon-time"></span> 12 phút trước
+                            </small>
+                          </div>
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, soluta, dolore officia alias voluptates sequi repudiandae temporibus nostrum eligendi similique!
+                          </p>                      
+                        </div>
+                      </li>
+                      <li class="right clearfix">
+                        <span class="pull-right"><img src="images/b.gif" alt="Avatar" class="img-circle"></span>
+                        <div class="chat-body clearfix">
+                          <div class="header">
+                            <strong class="pull-right">Zack Le</strong>
+                            <small class="text-muted">
+                              <span class="glyphicon glyphicon-time"></span> 7 phút trước
+                            </small>
+                          </div>
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, soluta, dolore officia alias voluptates sequi repudiandae temporibus nostrum eligendi similique!
+                          </p>                      
+                        </div>
+                      </li>
+                      <li class="left clearfix">
+                        <span class="pull-left"><img src="images/a.gif" alt="Avatar" class="img-circle"></span>
+                        <div class="chat-body clearfix">
+                          <div class="header">
+                            <strong>Zu Vn</strong>
+                            <small class="pull-right text-muted">
+                              <span class="glyphicon glyphicon-time"></span> 5 phút trước
+                            </small>
+                          </div>
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, soluta, dolore officia alias voluptates sequi repudiandae temporibus nostrum eligendi similique!
+                          </p>                      
+                        </div>
+                      </li>
+                      <li class="right clearfix">
+                        <span class="pull-right"><img src="images/b.gif" alt="Avatar" class="img-circle"></span>
+                        <div class="chat-body clearfix">
+                          <div class="header">
+                            <strong class="pull-right">Zack Le</strong>
+                            <small class="text-muted">
+                              <span class="glyphicon glyphicon-time"></span> 2 phút trước
+                            </small>
+                          </div>
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, soluta, dolore officia alias voluptates sequi repudiandae temporibus nostrum eligendi similique!
+                          </p>                      
+                        </div>
+                      </li>
+                      <li class="left clearfix">
+                        <span class="pull-left"><img src="images/a.gif" alt="Avatar" class="img-circle"></span>
+                        <div class="chat-body clearfix">
+                          <div class="header">
+                            <strong>Zu Vn</strong>
+                            <small class="pull-right text-muted">
+                              <span class="glyphicon glyphicon-time"></span> Vừa mới
+                            </small>
+                          </div>
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, soluta, dolore officia alias voluptates sequi repudiandae temporibus nostrum eligendi similique!
+                          </p>                      
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="panel-footer">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Gõ tin nhắn vào đây">
+                      <div class="input-group-btn">
+                        <button class="btn btn-primary" type="button">Gửi</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div><!-- End .col-md-4 chat -->
+              
+            </div><!-- End .row Timeline -->
+
+            <div class="row">
+
+              <div class="col-md-4">
+              <div class="panel-group">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <span class="glyphicon glyphicon-list-alt"></span> Thống kê tổng quan
+                    
+                  </div>
+
+                  <div class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div id="chart1" class="center-block" style="height: 307px;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                </div>
+              </div><!-- End .col-md-4 Left chart -->
+
+              <div class="col-md-4">
+              <div class="panel-group">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    
+                      <span class="glyphicon glyphicon-time"></span> Hoạt động gần đây
+                      
+                    
+                  </div>
+                  <div class="panel-collapse collapse in">
+                  <div class="panel-body">
+                    <ul class="list-group">
+                      <li class="list-group-item"><span class="glyphicon glyphicon-plus"></span> Đã cập nhập máy mới <span class="badge pull-right">Vừa mới</span></li>
+                      <li class="list-group-item"><span class="glyphicon glyphicon-comment"></span> Đã bình luận bài viết <span class="badge pull-right">7 phút trước</span></li>
+                      <li class="list-group-item"><span class="glyphicon glyphicon-plus-sign"></span> Đã thêm người dùng mới <span class="badge pull-right">50 phút trước</span></li>
+                      <li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Đã cập nhập danh sách <span class="badge pull-right">2 ngày trước</span></li>
+                      <li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Đã cập nhập danh sách <span class="badge pull-right">3 ngày trước</span></li>
+                      <li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Đã cập nhập danh sách <span class="badge pull-right">5 ngày trước</span></li>
+                      <li class="list-group-item"><span class="glyphicon glyphicon-cloud-download"></span> Đã sao lưu cơ sở dữ liệu <span class="badge pull-right">30 ngày trước</span></li>
+                    </ul>
+                  </div>
+                  </div>
+                </div>
+                </div>
+              </div><!-- End .col-md-4 Center recently action -->
+              <div class="col-md-4">
+                
+                <div class="panel-group">
+                  <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <span class="glyphicon glyphicon-time"></span> Đăng nhập gần đây
+                    </div>
+                    <div class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <!-- <table class="table-hover">
+                        <tbody>
+                          <tr>
+                            <td>157.685.364.215</td>
+                            <td class="pull-right">20.04.2014 03:00 PM</td>
+                          </tr>
+                          <tr>
+                            <td>157.685.364.215</td>
+                            <td class="pull-right">19.04.2014 01:00 PM</td>
+                          </tr>
+                        </tbody>
+                      </table> -->
+                      <ul class="list-group table-hover">
+                        <li class="list-group-item">157.685.364.215 <span class="pull-right">20.04.2014 03:00 PM</span></li>
+                        <li class="list-group-item">157.685.364.215 <span class="pull-right">20.04.2014 03:00 PM</span></li>
+                        <li class="list-group-item">157.685.364.215 <span class="pull-right">20.04.2014 03:00 PM</span></li>
+                        <li class="list-group-item">128.657.698.145 <span class="pull-right">20.04.2014 03:00 PM</span></li>
+                        <li class="list-group-item">157.685.364.215 <span class="pull-right">20.04.2014 03:00 PM</span></li>
+                        <li class="list-group-item">157.685.364.215 <span class="pull-right">20.04.2014 03:00 PM</span></li>
+                        <li class="list-group-item">128.657.698.145 <span class="pull-right">20.04.2014 03:00 PM</span></li>
+                      </ul>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div><!-- End .col-md-4 Right recently IP -->
+
+            </div><!-- End .row center chart -->
+
+          </div><!-- End .col-md-10 -->
+
+        </div>
+        
+    </div><!-- End .container-fluid -->
+    <!-- Bootstrap core JavaScript ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/raphael-min.js"></script>
+    <script src="js/morris.min.js"></script>
+    <script src="js/jquery.metisMenu.js"></script>
+    <!-- <script src="js/holder.js"></script> -->
+    <script type="text/javascript">
+      new Morris.Donut({
+        element: 'chart1',
+        data: [
+        {label: "Máy hỏng", value: 27},
+        {label: "Máy đang sửa", value: 15},
+        {label: "Máy đang hoạt động", value: 192}
+        ]
+      });
+
+      //submenu cho sidebar
+      $('#menu').metisMenu();
+      $(".alert").alert();
+    </script>
+
+  </body>
+</html>

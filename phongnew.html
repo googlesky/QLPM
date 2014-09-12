@@ -1,0 +1,681 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Administrator</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/admin.css">
+    <link rel="stylesheet" href="css/morris-0.4.3.min.css">
+    <link rel="stylesheet" href="css/timeline/timeline.css">
+    <!-- Custom styles for this template -->
+    <!-- <link href="style.css" rel="stylesheet"> -->
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]
+  </head> -->
+
+  <body>
+  
+  <!-- MENU HEADER ================================================================== -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">CTEC SYSTEM</a>
+      </div>
+    
+      <!-- Navigation top static -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+      
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">LINK</a></li>
+          <li><a href="#">LINK</a></li>
+          <li><a href="#">LINK</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right container-fluid">
+          <li>
+            <form class="navbar-form" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Tìm kiếm..." style="border-radius: 30px;">
+              </div>
+            </form>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="glyphicon glyphicon-bell"></span>
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="setting-mess.html">Zack Le&nbsp;&nbsp;&nbsp;<span class="badge pull-right">3</span></a></li>
+              <li><a href="setting-mess.html">ZuVN&nbsp;&nbsp;&nbsp;<span class="badge pull-right">1</span></a></li>
+              <li><a href="setting-mess.html">Nhanh&nbsp;&nbsp;&nbsp;<span class="badge pull-right">5</span></a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="glyphicon glyphicon-user"></span>
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="setting.html"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;Thông tin cá nhân</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-cog"></span>&nbsp;Tùy chọn</a></li>
+              <li class="divider"></li>
+              <li><a href="login.html"><span class="glyphicon glyphicon-off"></span>&nbsp;Đăng xuất</a></li>
+            </ul>
+          </li>
+        </ul>
+        
+      </div><!-- /.navbar-collapse -->
+    </div>
+    <!-- BODY ================================================================== -->
+    <div class="container-fluid" id="main_content">
+
+        <div class="row">
+          <!-- SIDEBAR ================================================================ -->
+          <div class="col-md-2 sidebar">
+          
+            <div class="row">
+              <div class="col-md-12">
+                <div class="img-circle" id="avatar">
+                <img alt="My Avatar" src="images/avatar.jpg" class="center-block img-circle img-responsive">
+                </div>
+                <p>
+                  <h1 class="text-center" style="color: #878787;">Zack Le</h1>
+                </p>
+              </div><!-- End .col-md-12 .avatar -->
+            </div>
+            <ul id="menu1" class="nav nav-sidebar">
+              <li>
+                <a href="admin.html">Trang chủ</a>
+
+              </li>
+              <li>
+                <a href="#">Quản lý <span class="glyphicon glyphicon-plus pull-right"></span></a>
+                <ul class="list-unstyled nav collapse in nav-sidebar">
+                  <li class="active"><a href="#">Phòng</a></li>
+                  <li><a href="may.html">Máy tính</a></li>
+                </ul>
+              </li>
+              <li><a href="setting.html">Người dùng</a></li>
+            </ul>
+          </div><!-- End .col-md-2 .sidebar-->
+
+          <!-- RIGHT MAIN ============================================================ -->
+          
+          <div class="col-md-10 col-md-offset-2" id="main_primary">
+
+            <div class="row">
+
+              <div class="col-md-12">
+
+                <div class="row">
+                  <div class="col-md-4">
+                    
+                    <h1>Quản lý phòng
+                      <small>Chi tiết về quản lý phòng</small>
+                    </h1>
+
+                  </div>
+                  
+                </div>
+
+                
+                <div class="alert alert-info fade in">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                  <strong>Chào mừng </strong> bạn đã đến với chức năng quản lý phòng.
+                </div>
+
+                <!-- Button trigger modal -->
+                
+
+                
+
+              </div><!-- End .col-md-12 -->
+
+            </div><!-- End .row top-->
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <span class="glyphicon glyphicon-info-sign"></span> Chi tiết phòng máy
+                  </div>
+                  <div class="panel-body" style="height: 600px; overflow: auto;">
+                    
+                    <table id="table1" class="table table-hover">
+                      <thead>
+                        <tr>
+                          <td>Số thứ tự</td>
+                          <td>Tên phòng</td>
+                          <td>Chú thích</td>
+                          <td>Người quản lý</td>
+                          <td>Số máy tính</td>
+                          <td>Chức năng</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Phòng 1</td>
+                          <td>Đây là phòng 1</td>
+                          <td>Nguyễn Bích Phương</td>
+                          <td>35</td>
+                          <td>
+                            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit1">Chỉnh sửa</button>
+                            <button class="btn btn-danger btn-sm">Xóa</button>
+                            <!-- Begin Edit modal -->
+                            <div class="modal fade" id="edit1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                <form action="">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title" id="myModalLabel">Chỉnh sửa</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+
+                                      <div class="form-group">
+                                        <label for="">Số thứ tự</label>
+                                        <input type="text" class="form-control" value="1" disabled>
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="">Tên phòng</label>
+                                        <input type="text" class="form-control" value="Phòng 1">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="">Chú thích</label>
+                                        <input type="text" class="form-control" value="Đây là phòng 1">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="">Người quản lý</label>
+                                        <input type="text" class="form-control" value="Nguyễn Bích Phương">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="">Số máy tính</label>
+                                        <input type="text" class="form-control" value="35">
+                                      </div>
+
+                                    </div>
+                                  </div><!-- End row -->
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Hủy bỏ</button>
+                                    <button type="button" class="btn btn-primary">Lưu thay đổi</button>
+                                  </div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- End Edit modal -->
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>Phòng 2</td>
+                          <td>Đây là phòng 2</td>
+                          <td>Nguyễn Bích Phương</td>
+                          <td>35</td>
+                          <td>
+                            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit2">Chỉnh sửa</button>
+                            <button class="btn btn-danger btn-sm">Xóa</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Phòng 3</td>
+                          <td>Đây là phòng 3</td>
+                          <td>Nguyễn Bích Phương</td>
+                          <td>35</td>
+                          <td>
+                            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit3">Chỉnh sửa</button>
+                            <button class="btn btn-danger btn-sm">Xóa</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>Phòng 4</td>
+                          <td>Đây là phòng 4</td>
+                          <td>Nguyễn Bích Phương</td>
+                          <td>35</td>
+                          <td>
+                            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit4">Chỉnh sửa</button>
+                            <button class="btn btn-danger btn-sm">Xóa</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>Phòng 5</td>
+                          <td>Đây là phòng 5</td>
+                          <td>Nguyễn Bích Phương</td>
+                          <td>35</td>
+                          <td>
+                            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit5">Chỉnh sửa</button>
+                            <button class="btn btn-danger btn-sm">Xóa</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>Phòng 6</td>
+                          <td>Đây là phòng 6</td>
+                          <td>Nguyễn Bích Phương</td>
+                          <td>35</td>
+                          <td>
+                            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit6">Chỉnh sửa</button>
+                            <button class="btn btn-danger btn-sm">Xóa</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>7</td>
+                          <td>Phòng 7</td>
+                          <td>Đây là phòng 7</td>
+                          <td>Nguyễn Bích Phương</td>
+                          <td>35</td>
+                          <td>
+                            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit7">Chỉnh sửa</button>
+                            <button class="btn btn-danger btn-sm">Xóa</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>8</td>
+                          <td>Phòng 8</td>
+                          <td>Đây là phòng 8</td>
+                          <td>Nguyễn Bích Phương</td>
+                          <td>35</td>
+
+                          <td>
+                            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit8">Chỉnh sửa</button>
+                            <button class="btn btn-danger btn-sm">Xóa</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>9</td>
+                          <td>Phòng 9</td>
+                          <td>Đây là phòng 9</td>
+                          <td>Nguyễn Bích Phương</td>
+                          <td>35</td>
+                          <td>
+                            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit9">Chỉnh sửa</button>
+                            <button class="btn btn-danger btn-sm">Xóa</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>10</td>
+                          <td>Phòng 10</td>
+                          <td>Đây là phòng 10</td>
+                          <td>Nguyễn Bích Phương</td>
+                          <td>35</td>
+                          <td>
+                            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit10">Chỉnh sửa</button>
+                            <button class="btn btn-danger btn-sm">Xóa</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>7</td>
+                          <td>Phòng 7</td>
+                          <td>Đây là phòng 7</td>
+                          <td>Nguyễn Bích Phương</td>
+                          <td>35</td>
+                          <td>
+                            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit11">Chỉnh sửa</button>
+                            <button class="btn btn-danger btn-sm">Xóa</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>8</td>
+                          <td>Phòng 8</td>
+                          <td>Đây là phòng 8</td>
+                          <td>Nguyễn Bích Phương</td>
+                          <td>35</td>
+                          <td>
+                            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit12">Chỉnh sửa</button>
+                            <button class="btn btn-danger btn-sm">Xóa</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>9</td>
+                          <td>Phòng 9</td>
+                          <td>Đây là phòng 9</td>
+                          <td>Nguyễn Bích Phương</td>
+                          <td>35</td>
+                          <td>
+                            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit13">Chỉnh sửa</button>
+                            <button class="btn btn-danger btn-sm">Xóa</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>10</td>
+                          <td>Phòng 10</td>
+                          <td>Đây là phòng 10</td>
+                          <td>Nguyễn Bích Phương</td>
+                          <td>35</td>
+                          <td>
+                            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit14">Chỉnh sửa</button>
+                            <button class="btn btn-danger btn-sm">Xóa</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                  </table>
+                  
+                  </div>
+
+                  <div class="panel-footer">
+                    <div class="row">
+                      <div class="col-md-12">
+                          <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal1">
+                            Thêm phòng
+                          </button>
+
+                          <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal2" style="margin-right: 10px;">
+                            Xóa tùy chọn
+                          </button>
+                      </div>
+
+                        <!-- Modal 1-->
+                        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel">Thêm phòng</h4>
+                              </div>
+                              <div class="modal-body">
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <form action="">
+                                      <div class="form-group"><label for="">Tên phòng</label><input type="text" class="form-control" placeholder="Nhập tên phòng"></div>
+                                      <div class="form-group"><label for="">Chú thích</label><input type="text" class="form-control" placeholder="Nhập chú thích"></div>
+                                      <div class="form-group"><label for="">Người quản lý</label><input type="text" class="form-control" placeholder="Nhập người quản lý phòng"></div>
+                                      <div class="form-group"><label for="">Số lượng máy</label><input type="text" class="form-control" placeholder="Nhập số máy trong 1 phòng"></div>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Hủy bỏ</button>
+                                <button type="button" class="btn btn-primary">Lưu thay đổi</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Modal 2-->
+                        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel">Xóa phòng</h4>
+                              </div>
+                              <div class="modal-body">
+                                <div class="row">
+                                  <div class="col-md-3">
+                                    <div class="checkbox"><label for=""><input type="checkbox">Phòng 1</label></div>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <div class="checkbox"><label for=""><input type="checkbox">Phòng 2</label></div>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <div class="checkbox"><label for=""><input type="checkbox">Phòng 3</label></div>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <div class="checkbox"><label for=""><input type="checkbox">Phòng 4</label></div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-3">
+                                    <div class="checkbox"><label for=""><input type="checkbox">Phòng 5</label></div>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <div class="checkbox"><label for=""><input type="checkbox">Phòng 6</label></div>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <div class="checkbox"><label for=""><input type="checkbox">Phòng 7</label></div>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <div class="checkbox"><label for=""><input type="checkbox">Phòng 8</label></div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-3">
+                                    <div class="checkbox"><label for=""><input type="checkbox">Phòng 9</label></div>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <div class="checkbox"><label for=""><input type="checkbox">Phòng 10</label></div>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <div class="checkbox"><label for=""><input type="checkbox">Phòng 11</label></div>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <div class="checkbox"><label for=""><input type="checkbox">Phòng 12</label></div>
+                                  </div>
+                                </div>
+                              </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Hủy bỏ</button>
+                        <button type="button" class="btn btn-primary">Xóa phòng đã chọn</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                      </div>
+                  </div>
+
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="panel panel-primary">
+                    <div class="panel-heading">
+                      <span class="glyphicon glyphicon-calendar"></span> Lịch làm việc - Tuần thứ 34
+                    </div>
+                    <div class="panel-body" style="height: 600px; overflow: auto;">
+                      
+                      <div class="panel-group" id="accordion">
+                        <div class="panel panel-primary">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                <span class="label label-success">Sáng</span> <b>Lê Phương Phi - PHÒNG 2</b>
+                              </a>
+                              <span class="pull-right"><input type="checkbox"></span>
+                            </h4>
+                          </div>
+                          <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="panel panel-primary">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                <span class="label label-success">Sáng</span> <b>Lê Phương Phi - PHÒNG 2</b>
+                              </a>
+                              <span class="pull-right"><input type="checkbox"></span>
+                            </h4>
+                          </div>
+                          <div id="collapseTwo" class="panel-collapse collapse">
+                            <div class="panel-body">
+                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="panel panel-primary">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                <span class="label label-success">Sáng</span> <b>Lê Phương Phi - PHÒNG 2</b>
+                              </a>
+                              <span class="pull-right"><input type="checkbox"></span>
+                            </h4>
+                          </div>
+                          <div id="collapseThree" class="panel-collapse collapse">
+                            <div class="panel-body">
+                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="panel panel-primary">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFouth">
+                                <span class="label label-success">Sáng</span> <b>Lê Phương Phi - PHÒNG 2</b>
+                              </a>
+                              <span class="pull-right"><input type="checkbox"></span>
+                            </h4>
+                          </div>
+                          <div id="collapseFouth" class="panel-collapse collapse">
+                            <div class="panel-body">
+                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="panel panel-primary">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+                                <span class="label label-warning">Chiều</span> <b>Lê Phương Phi - PHÒNG 2</b>
+                              </a>
+                              <span class="pull-right"><input type="checkbox"></span>
+                            </h4>
+                          </div>
+                          <div id="collapseFive" class="panel-collapse collapse">
+                            <div class="panel-body">
+                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="panel panel-primary">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+                                <span class="label label-warning">Chiều</span> <b>Lê Phương Phi - PHÒNG 2</b>
+                              </a>
+                              <span class="pull-right"><input type="checkbox"></span>
+                            </h4>
+                          </div>
+                          <div id="collapseSix" class="panel-collapse collapse">
+                            <div class="panel-body">
+                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="panel panel-primary">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
+                                <span class="label label-warning">Chiều</span> <b>Sinh viên sửa máy - PHÒNG 4</b>
+                              </a>
+                              <span class="pull-right"><input type="checkbox"></span>
+                            </h4>
+                          </div>
+                          <div id="collapseSeven" class="panel-collapse collapse">
+                            <div class="panel-body">
+                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="panel panel-primary">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapseEight">
+                                <span class="label label-warning">Chiều</span> <b>Lê Phương Phi - PHÒNG 3</b>
+                              </a>
+                              <span class="pull-right"><input type="checkbox"></span>
+                            </h4>
+                          </div>
+                          <div id="collapseEight" class="panel-collapse collapse">
+                            <div class="panel-body">
+                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="panel-footer">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal3">
+                              Thêm lịch
+                            </button>
+
+                            <button class="btn btn-primary pull-right" style="margin-right: 10px;">
+                              Xóa lịch
+                            </button>
+                            <!-- Modal 1-->
+                            <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title" id="myModalLabel">Thêm phòng</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div class="row">
+                                      <div class="col-md-12">
+                                        <form action="">
+                                          <div class="form-group"><label for="">Giáo viên</label><input type="text" class="form-control" placeholder="Nhập tên giáo viên quản lý phòng"></div>
+                                          <div class="form-group"><label for="">Phòng</label><input type="text" class="form-control" placeholder="Nhập tên phòng"></div>
+                                          <div class="form-group"></div>
+                                          <div class="form-group"><label for="">Nội dung</label><textarea name="" id="" cols="5" rows="5" class="form-control" placeholder="Nhập nội dung vào đây"></textarea></div>
+                                        </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Hủy bỏ</button>
+                                    <button type="button" class="btn btn-primary">Lưu thay đổi</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+            </div> <!-- End .row tables -->
+
+          </div><!-- End .col-md-10 -->
+
+        </div>
+    </div><!-- End .container-fluid -->
+    <!-- Bootstrap core JavaScript ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/raphael-min.js"></script>
+    <script src="js/morris.min.js"></script>
+    <script src="js/jquery.metisMenu.js"></script>
+    <!-- <script src="js/holder.js"></script> -->
+    <script type="text/javascript">
+      $('#menu1').metisMenu();
+      $(".alert").alert();
+    </script>
+
+  </body>
+</html>
