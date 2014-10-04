@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <?php
 /**
  * Created by PhpStorm.
@@ -7,3 +8,4 @@
  */
 
 require_once("include/function.php");
+replace();

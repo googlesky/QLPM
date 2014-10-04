@@ -6,7 +6,7 @@ require_once("globalfunction.php");
 function dbconnect(){
     $db = array(
         "root" => "root",
-        "password" => "lpkTj44875u",
+        "password" => "",
         "host" => "localhost",
         "db" => "qlpm",
     );
@@ -57,5 +57,10 @@ function curuser(){
 //    }
 //    return $ip;
 //}
-
+function replace(){
+    $find = array(";",",",".","=","-");
+    $replace = ("Tôi yêu, Việt. Nam");
+    $onlyreplace = str_replace($find, "" , $replace );
+    echo $onlyreplace;
+}
 ?>
